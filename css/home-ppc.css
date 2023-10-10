@@ -1,0 +1,80 @@
+/* ========================================================================== */
+/* ========================================================================== */
+							/* PPC HOME STYLES */
+/* ========================================================================== */
+/* ========================================================================== */
+
+header{
+    position: relative;
+    height: 100%;
+    background: #0A178F;
+}
+
+
+header #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.home-carousel{
+    margin-top: 0px;
+    height: 100%;
+    padding-top: 10%;
+}
+
+.home-carousel h1{
+    color: #FFF;
+}
+
+.home-carousel p{
+    color: #FFF;
+}
+
+.home-hero-pic img{
+    width: 100%;
+}
+
+.home-hero{
+    padding: 3rem 0rem;
+    height: auto;
+    position: relative;
+}
+
+.home-hero h1{
+    line-height: 1.4;
+}
+
+.home-hero-pic:hover{
+    animation-duration: 1.2s;
+    animation-name: animateLayer;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+}
+
+@keyframes animateLayer{
+    from{
+        transform: translateX(0) translateY(0);
+    }
+    
+    to{
+        transform: translateX(15px) translateY(-15px);
+        
+    }
+    
+}
+
+@media (max-width:768px) { 
+.home-hero{
+    text-align: center;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+}
+    
+}
+
