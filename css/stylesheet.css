@@ -5277,13 +5277,28 @@ footer .row{
 }
 
 .nav-menu > li > a:hover{
-    /*font-weight: 600;*/
     color: #FFBE0B;
 }
 
 .nav-menu > li > a.nav-active{
-    /*font-weight: 600;*/
     color: #FFBE0B;
+}
+
+section .middle .error-number{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 6rem;
+    color: #333333;
+}
+
+section .middle h4{
+    color: #FFBE0B;
+    margin-top: -20px;
+    font-weight: 400;
+}
+
+section .middle{
+    text-align: center;
 }
 
 
