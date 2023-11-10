@@ -5232,10 +5232,6 @@ figure {
     cursor: pointer;
 }
 
-/*.front-bar .circle-border:before{*/
-/*    border: solid 2px #ffffff;*/
-/*}*/
-
 .bottom-block {
     display: flex;
     flex-direction: row;
@@ -5312,6 +5308,14 @@ section .middle h4{
 
 section .middle{
     text-align: center;
+}
+
+
+
+@media (min-width: 410px) {
+    .contact-bl {
+        padding-left: 48px;
+    }
 }
 
 
