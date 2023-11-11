@@ -1395,7 +1395,7 @@ a.active:after {
 .support-img{
     float: left;
     margin-right: 10px;
-    height: 60x;
+    height: 60px;
 }
 
 figure.support-icon{
@@ -2412,7 +2412,7 @@ img {
 
 hr.project-info-separator{
     margin: 15px auto;
-    border-bottom: solid dotted #ddd;  
+    border-bottom: 1px solid #ddd;
 }
 
 .case-pic{
@@ -4296,6 +4296,7 @@ p.paypal-info a:hover {
 
 .span-contact p{
     padding-top: 1px;
+    padding-left: 45px;
 }
 
 .contact-icon{
