@@ -5320,6 +5320,24 @@ section .middle{
 }
 
 
+.seo-about strong{
+    font-weight: bolder;
+}
+
+
+.no_marker{
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #677C7E;
+    line-height: 2;
+}
+
+.no_marker p{
+    margin-bottom: 0px;
+}
+
 
 
 
