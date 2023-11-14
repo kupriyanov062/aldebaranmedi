@@ -98,7 +98,7 @@
                     <p>ENTER THE REQUIRED INFORMATION</p>
                     <div class="span-contact">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <p>info@clickor.com</p>
+                        <p>info@clickor.net</p>
                     </div>
                     <div class="span-contact">
                         <div class="contact-icon"><i class="fas fa-map"></i></div>
@@ -110,26 +110,53 @@
             </div>
             <div class="col-lg-6">
                 <div class="contact-form">
+
                     <form id="contact-form" method="post" action="contact.php" novalidate="true">
                         <div class="messages"></div>
                         <div class="controls">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input id="form_name" type="text" name="name" class="form-control customize" placeholder="Name" required="required" data-error="Firstname is required.">
+                                        <select id="user_type" class="form-control customize" name="user_type">
+                                            <option value="advertiser">Advertiser</option>
+                                            <option value="publisher">Publisher</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 publisher-fields">
+                                    <div class="form-group">
+                                        <input id="form_name" type="text" name="name" class="form-control customize" placeholder="Name">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input id="form_email" type="email" name="email" class="form-control customize" placeholder="Email address" required="required" data-error="Valid email is required.">
+                                        <input id="form_name_company" type="text" name="company_name" class="form-control customize" placeholder="Company name / Freelance name"">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea id="form_message" name="message" class="form-control customize" placeholder="Your message" rows="5" required="required" data-error="Please,leave us a message."></textarea>
+                                        <input id="form_email" type="text" name="email" class="form-control customize" placeholder="Email">
                                         <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input id="form_email_pass" type="text" name="email_pass" class="form-control customize" placeholder="Password">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group customize_bl">
+                                        <label>
+                                            <input type="checkbox" id="agreeCheckbox" name="agree">
+                                            I agree to the <a class="" href="terms_and_conditions.html">&nbsp;Terms of Service</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group customize_bl message_send">
                                     </div>
                                 </div>
                             </div>
@@ -140,6 +167,47 @@
                             </div>
                         </div>
                     </form>
+
+<!--                    <form id="contact-form" method="post" action="contact.php" novalidate="true">-->
+<!--                        <div class="messages"></div>-->
+<!--                        <div class="controls">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label for="user_type">Select user type:</label>-->
+<!--                                        <select id="user_type" class="form-control">-->
+<!--                                            <option value="advertiser">Advertiser</option>-->
+<!--                                            <option value="publisher">Publisher</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="advertiser-fields">-->
+<!--                                &lt;!&ndash; Advertiser fields &ndash;&gt;-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <input id="advertiser_field" type="text" name="advertiser_field" class="form-control customize" placeholder="Advertiser-specific field" required="required" data-error="This field is required.">-->
+<!--                                        <div class="help-block with-errors"></div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="publisher-fields">-->
+<!--                                &lt;!&ndash; Publisher fields &ndash;&gt;-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <input id="publisher_field" type="text" name="publisher_field" class="form-control customize" placeholder="Publisher-specific field" required="required" data-error="This field is required.">-->
+<!--                                        <div class="help-block with-errors"></div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-12">-->
+<!--                                    <p><input type="submit" class="btn btn-custom disabled" value="Send message"></p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
+
                 </div>
             </div>
         </div>
@@ -191,7 +259,7 @@
                         <h6>Nature of business (SIC) - 62090</h6>
                     </div>
                     <div class="location-box location-phone">
-                        <h6><span>Email: &nbsp;</span> <a href="mailto:info@clickor.com">info@clickor.com</a></h6>
+                        <h6><span>Email: &nbsp;</span> <a href="mailto:info@clickor.net">info@clickor.net</a></h6>
                     </div>
                 </div>
             </div>
@@ -209,6 +277,7 @@
 <!-- ==============================================
 JAVASCRIPTS
 =============================================== -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>

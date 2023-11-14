@@ -1,5 +1,15 @@
 jQuery(document).ready(function(){
-
+    $('.publisher-fields').hide();
+    $('#user_type').change(function () {
+        var userType = $(this).val();
+        if (userType === 'advertiser') {
+            $('.advertiser-fields').show();
+            $('.publisher-fields').hide();
+        } else if (userType === 'publisher') {
+            $('.advertiser-fields').hide();
+            $('.publisher-fields').show();
+        }
+    });
 	"use strict";
 	
 	// here all ready functions
@@ -534,14 +544,26 @@ $(function () {
                 data: $(this).serialize(),
                 success: function (data)
                 {
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
-
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
+                    $('.message_send').empty();
+                    if (data == 'Thank you! Your message has been sent successfully. Our managers will contact you.') {
                         $('#contact-form')[0].reset();
+                        $('.publisher-fields').hide();
+                        var targetElement = $('.message_send');
+                        var newDiv = $('<p style="color: green">' + data + ' </p>');
+                        targetElement.append(newDiv);
+                    } else {
+                        var targetElement = $('.message_send');
+                        var newDiv = $('<p style="color: red">' + data + ' </p>');
+                        targetElement.append(newDiv);
                     }
+                    // var messageAlert = 'alert-' + data.type;
+                    // var messageText = data.message;
+                    //
+                    // var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    // if (messageAlert && messageText) {
+                    //     $('#contact-form').find('.messages').html(alertBox);
+                    //     $('#contact-form')[0].reset();
+                    // }
                 }
             });
             return false;
@@ -1824,6 +1846,5 @@ function counter_up(){
         });
 
     };
-
 (jQuery);
 
