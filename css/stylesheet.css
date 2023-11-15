@@ -4313,6 +4313,12 @@ p.paypal-info a:hover {
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
     color: red;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.with-errors p{
+    font-size: 10px;
 }
 
 .alert-success {
@@ -5373,6 +5379,90 @@ label {
     text-align: center;
     font-size: 12px;
 }
+
+.choices__list--dropdown{
+    z-index: 2;
+    color: black;
+    border: none;
+    margin-top: 1px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22), 0 -10px 10px rgba(0,0,0,0.1);*/
+}
+
+.choices__list--dropdown .choices__item--selectable{
+    padding-right: 10px;
+    padding-left: 17px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+}
+
+.choices__list--dropdown.is-active{
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+}
+
+.choices.is-open{
+    border-radius: 0.25rem  0.25rem 0px 0px;
+}
+
+.is-flipped.is-open .choices__inner{
+    border-radius: 10px 10px 10px 10px;
+}
+
+.choices[data-type*=select-one]:after{
+    height: 8px;
+    width: 8px;
+    z-index: 3;
+    top: 40%;
+    border: 1px solid #495057;
+    border-width: 0 0 1px 1px;
+    transform: rotate(-45deg);
+}
+
+.choices[data-type*=select-one].is-open:after{
+    top: 60%;
+    border: 1px solid #495057;
+    border-width:  1px 1px 0 0;
+}
+
+.choices__inner{
+    /*position: relative;*/
+    border-radius: 0.25rem;
+    height: calc(2.25rem + 2px);
+    border: none;
+    z-index: 3;
+    background-color: #f0f5f5;
+}
+@media (max-width: 991px) {
+    .choices__inner{
+        padding: 3px 0 0 4px;
+    }
+}
+
+.is-open .choices__inner{
+    border-radius: 10px;
+}
+
+.choices__list--single .choices__item{
+    color: #495057;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.choices__list--single{
+    padding: 0;
+}
+
+.margin_bottom{
+    margin-bottom: 0;
+}
+
+
 
 
 
