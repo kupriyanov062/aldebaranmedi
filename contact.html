@@ -25,6 +25,7 @@
     =============================================== -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="fonts/css/all.min.css">
@@ -117,34 +118,40 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <select id="user_type" class="form-control customize" name="user_type">
+                                        <select class="js-choice" name="user_role" id="user_role">
                                             <option value="advertiser">Advertiser</option>
                                             <option value="publisher">Publisher</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-12 publisher-fields">
-                                    <div class="form-group">
+                                    <div class="form-group margin_bottom">
                                         <input id="form_name" type="text" name="name" class="form-control customize" placeholder="Name">
-                                        <div class="help-block with-errors"></div>
+                                        <div class="help-block with-errors name_error"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 advertiser-fields">
+                                    <div class="form-group margin_bottom">
+                                        <input  type="text" name="company_name" class="form-control customize" placeholder="Company name">
+                                        <div class="help-block with-errors company_name_error"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 publisher-fields">
+                                    <div class="form-group margin_bottom">
+                                        <input  type="text" name="company_name_p" class="form-control customize" placeholder="Company name / Freelance name">
+                                        <div class="help-block with-errors company_name_p_error"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input id="form_name_company" type="text" name="company_name" class="form-control customize" placeholder="Company name / Freelance name"">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
+                                    <div class="form-group margin_bottom">
                                         <input id="form_email" type="text" name="email" class="form-control customize" placeholder="Email">
-                                        <div class="help-block with-errors"></div>
+                                        <div class="help-block with-errors email_error"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="form-group">
+                                    <div class="form-group margin_bottom">
                                         <input id="form_email_pass" type="text" name="email_pass" class="form-control customize" placeholder="Password">
-                                        <div class="help-block with-errors"></div>
+                                        <div class="help-block with-errors pass_error"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -153,6 +160,7 @@
                                             <input type="checkbox" id="agreeCheckbox" name="agree">
                                             I agree to the <a class="" href="terms_and_conditions.html">&nbsp;Terms of Service</a>
                                         </label>
+                                        <div class="help-block with-errors agree_error"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -277,6 +285,7 @@
 <!-- ==============================================
 JAVASCRIPTS
 =============================================== -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/bootstrap.min.js"></script>
