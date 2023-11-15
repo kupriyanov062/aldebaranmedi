@@ -568,7 +568,7 @@ $(function () {
                                 var newDiv = $('<p style="color: red">' + value + ' </p>');
                                 targetElement.append(newDiv);
                             }
-                            if (value == 'Email password field is not correct') {
+                            if (value == 'Password field is not correct') {
                                 var targetElement = $('.pass_error');
                                 var newDiv = $('<p style="color: red">' + value + ' </p>');
                                 targetElement.append(newDiv);

