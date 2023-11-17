@@ -17,6 +17,7 @@ jQuery(document).ready(function () {
             $('.publisher-fields').show();
         }
     });
+
     "use strict";
 
     // here all ready functions
@@ -40,12 +41,7 @@ jQuery(document).ready(function () {
 });
 
 
-const element = document.querySelector(".js-choice")
 
-const choices = new Choices(element, {
-    searchEnabled: false,
-    itemSelectText: ""
-})
 
 // ----------------------------------------
 // ---------------  LOADER  ---------------
